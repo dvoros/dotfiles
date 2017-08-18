@@ -10,3 +10,9 @@ vnoremap . :normal .<CR>
 " open new windows to the right and below
 set splitbelow
 set splitright
+
+" Search highlight
+set hlsearch
+
+" colorscheme
+color torte
