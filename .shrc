@@ -1,7 +1,7 @@
 # GIT
 alias gs='git status'
 alias gr='git remote'
-alias gl='git log --oneline --decorate=short --graph'
+alias gl='git log --oneline --decorate=short --graph --date-order'
 alias glf='git log --decorate=full --pretty=fuller'
 alias glff='git log --decorate=full --pretty=fuller -p'
 alias gd='git diff'
