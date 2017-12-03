@@ -16,3 +16,6 @@ set hlsearch
 
 " colorscheme
 color torte
+
+" backspace in insert mode (after upgrading to vim8)
+set backspace=indent,eol,start
