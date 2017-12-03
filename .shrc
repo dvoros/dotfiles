@@ -7,3 +7,7 @@ alias glff='git log --decorate=full --pretty=fuller -p'
 alias gd='git diff'
 alias grh='git reset --hard'
 alias grhh='git reset --hard HEAD~'
+
+f() {
+	find . -iname "$1"
+}
