@@ -10,11 +10,13 @@ alias grh='git reset --hard'
 alias grhh='git reset --hard HEAD~'
 alias grhu='git reset --hard @{u}'
 alias gsno='git show --name-only'
+alias gcp='git cherry-pick'
+alias gcpx='git cherry-pick -x'
 
 # Find stuff
 f() {
 	rm -f /tmp/found_with_f
-	find . -iname "$1" 2>/dev/null | tee /tmp/found_with_f
+	find . -iname "*$1*" 2>/dev/null | tee /tmp/found_with_f
 	export F="$(cat /tmp/found_with_f | paste -sd ' ')"
 }
 
