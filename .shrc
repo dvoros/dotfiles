@@ -32,3 +32,8 @@ v() {
 		vim -p $(f "$1")
 	fi
 }
+
+# Launch remote tmux
+tmux_at () {
+	ssh -t $@ 'tmux -f <(wget -qO- https://raw.githubusercontent.com/dvoros/dotfiles/master/remote_tmux.conf)'
+}
