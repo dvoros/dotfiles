@@ -13,25 +13,9 @@ alias gsno='git show --name-only'
 alias gcp='git cherry-pick'
 alias gcpx='git cherry-pick -x'
 
-# Find stuff
-f() {
-	rm -f /tmp/found_with_f
-	find . -iname "*$1*" 2>/dev/null | tee /tmp/found_with_f
-	export F="$(cat /tmp/found_with_f | paste -sd ' ')"
-}
-
 # Edit found stuff
-v() {
-	if [ "x$1" = "x" ]; then
-		if [ "x$F" = "x" ]; then
-			echo "No previous f."
-		else
-			vim -p $(echo $F)
-		fi
-	else
-		vim -p $(f "$1")
-	fi
-}
+alias v='vim $(fzf)'
+alias vh='vim $(FZF_DEFAULT_COMMAND="find . -type f" fzf)'
 
 # Launch remote tmux
 tmux_at () {
