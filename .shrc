@@ -14,7 +14,13 @@ alias gcp='git cherry-pick'
 alias gcpx='git cherry-pick -x'
 
 # Edit found stuff
-alias v='vim $(fzf)'
+v () {
+	f="$(fzf)"
+	if [ "x$f" != "x" ]; then
+		echo "$f"
+		vim "$f"
+	fi
+}
 alias vh='vim $(FZF_DEFAULT_COMMAND="find . -type f" fzf)'
 
 # Launch remote tmux
