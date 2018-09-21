@@ -25,5 +25,5 @@ alias vh='vim $(FZF_DEFAULT_COMMAND="find . -type f" fzf)'
 
 # Launch remote tmux
 tmux_at () {
-	ssh -t $@ 'tmux -f <(wget -qO- https://raw.githubusercontent.com/dvoros/dotfiles/master/remote_tmux.conf)'
+	ssh -t $@ 'tmux -S /tmp/dvoros.tmux.sock attach || tmux -S /tmp/dvoros.tmux.sock -f <(wget -qO- https://raw.githubusercontent.com/dvoros/dotfiles/master/remote_tmux.conf)'
 }
