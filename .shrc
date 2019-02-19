@@ -12,6 +12,8 @@ alias grhu='git reset --hard @{u}'
 alias gsno='git show --name-only'
 alias gcp='git cherry-pick'
 alias gcpx='git cherry-pick -x'
+alias gre='git rebase'
+alias ga='git add'
 
 # Edit found stuff
 v () {
