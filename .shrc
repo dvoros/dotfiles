@@ -4,6 +4,7 @@ alias gr='git remote'
 alias gl='git log --graph --date-order --pretty=format:"%C(yellow)%h %C(green)%cd %C(auto)%<(12,trunc)%an:%C(auto)%d %s" --date=iso'
 alias glf='git log --decorate=full --pretty=fuller'
 alias glff='git log --decorate=full --pretty=fuller -p'
+alias glu='gl HEAD @{u}'
 alias gd='git diff'
 alias gdw='git diff --color-words=.'
 alias grh='git reset --hard'
@@ -14,6 +15,7 @@ alias gcp='git cherry-pick'
 alias gcpx='git cherry-pick -x'
 alias gre='git rebase'
 alias ga='git add'
+alias gref='git reflog'
 
 # Edit found stuff
 v () {
