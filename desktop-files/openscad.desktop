@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=OpenSCAD
+Comment=OpenSCAD is software for creating solid 3D CAD objects.
+Exec=/home/dvoros/Downloads/OpenSCAD-2019.05-x86_64.AppImage
+Path=/home/dvoros/Downloads
+Icon=/home/dvoros/dotfiles/desktop-files/openscad.png
+Terminal=false
+Type=Application
+Categories=Utility;Development;

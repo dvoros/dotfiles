@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Cura
+Comment=Trusted by millions of users, Ultimaker Cura is the world’s most popular 3D printing software.
+Exec=/home/dvoros/Downloads/Ultimaker_Cura-4.4.0.AppImage
+Path=/home/dvoros/Downloads
+Icon=/home/dvoros/dotfiles/desktop-files/cura.png
+Terminal=false
+Type=Application
+Categories=Utility;Development;
