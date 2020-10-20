@@ -2,8 +2,8 @@
 Version=1.0
 Name=Blender
 Comment=Open source 3D creation. Free to use for any purpose, forever.
-Exec=/home/dvoros/blender-2.82a-linux64/blender %U
-Path=/home/dvoros/blender-2.82a-linux64
+Exec=/home/dvoros/blender-2.83.0-linux64/blender %U
+Path=/home/dvoros/blender-2.83.0-linux64
 Icon=/home/dvoros/dotfiles/desktop-files/blender.svg
 Terminal=false
 Type=Application

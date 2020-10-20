@@ -5,6 +5,7 @@ alias gl='git log --graph --date-order --pretty=format:"%C(yellow)%h %C(green)%c
 alias glf='git log --decorate=full --pretty=fuller'
 alias glff='git log --decorate=full --pretty=fuller -p'
 alias glu='gl HEAD @{u}'
+alias gco='git checkout'
 alias gd='git diff'
 alias gdw='git diff --color-words=.'
 alias grh='git reset --hard'
