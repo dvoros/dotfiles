@@ -19,3 +19,6 @@ color torte
 
 " backspace in insert mode (after upgrading to vim8)
 set backspace=indent,eol,start
+
+" proper autoindent for YAML
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
