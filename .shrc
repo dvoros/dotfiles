@@ -1,9 +1,14 @@
 # GIT
-. /usr/share/bash-completion/completions/git
+if [ -f ~/.git-completion.bash ]; then
+	. ~/.git-completion.bash
+elif [ -f /usr/share/bash-completion/completions/git ]; then
+	. /usr/share/bash-completion/completions/git
+fi
+export GIT_COMPLETION_SHOW_ALL_COMMANDS=1 # enable auto-complete for plumbing commands
 alias gs='git status'
 alias gr='git remote'
 __git_complete gr _git_remote
-alias gl='git log --graph --date-order --pretty=format:"%C(yellow)%h %C(blue)%G? %C(green)%cd %C(auto)%<(12,trunc)%an:%C(auto)%d %s" --date=iso'
+alias gl='git log --graph --date-order --pretty=format:"%C(yellow)%h %C(green)%cd %C(auto)%<(12,trunc)%an:%C(auto)%d %s" --date=iso'
 __git_complete gl _git_log
 alias glf='git log --decorate=full --pretty=fuller'
 __git_complete glf _git_log
@@ -25,10 +30,12 @@ alias grhm='git reset --hard master@{u}'
 alias gsno='git show --name-only'
 alias gcp='git cherry-pick'
 alias gcpx='git cherry-pick -x'
+alias grem='git rebase master@{u}'
 alias gre='git rebase'
 __git_complete gre _git_rebase
 alias greu='git rebase @{u}'
 __git_complete greu _git_rebase
+alias greim='git rebase master@{u}'
 alias greiu='git rebase -i @{u}'
 __git_complete greiu _git_rebase
 alias ga='git add'
@@ -37,6 +44,8 @@ alias gf='git fetch'
 __git_complete gf _git_fetch
 alias gfo='git fetch origin'
 alias grm='git fetch origin && git checkout master && git reset --hard origin/master'
+alias gcav='git commit -av'
+alias gcv='git commit -v'
 
 alias k='kubectl'
 
@@ -49,7 +58,7 @@ v () {
 	f="$(fzf-tmux -p)"
 	if [ "x$f" != "x" ]; then
 		echo "$f"
-		vim "$f"
+		nvim "$f"
 	fi
 }
 alias vh='vim $(FZF_DEFAULT_COMMAND="find . -type f" fzf)'
@@ -58,3 +67,9 @@ alias vh='vim $(FZF_DEFAULT_COMMAND="find . -type f" fzf)'
 tmux_at () {
 	ssh -t $@ 'tmux -S /tmp/dvoros.tmux.sock attach || tmux -S /tmp/dvoros.tmux.sock -f <(wget -qO- https://raw.githubusercontent.com/dvoros/dotfiles/master/remote_tmux.conf)'
 }
+
+stty stop ""
+
+
+# git training
+# alias gl='git log --graph --oneline'
