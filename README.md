@@ -1,9 +1,16 @@
+Prerequisites:
+- install RobotoMono from: https://www.nerdfonts.com/font-downloads
+- install `brew`
+- install `kitty` (on Mac)
+- install aerospace (on Mac)
+
 ```
 cd ~
 git clone git@github.com:dvoros/dotfiles.git
 ln -s dotfiles/.vimrc
 ln -s dotfiles/.tmux.conf
-if [ -f .bashrc ]; then printf "\nsource ~/dotfiles/.shrc" >> .bashrc; fi
-if [ -f .zshrc ]; then printf "\nsource ~/dotfiles/.shrc" >> .zshrc; fi
+printf "\nsource ~/dotfiles/.shrc" >> .zshrc
 mkdir .vimswap
 ```
+
+Then pick and choose from the Makefile targets.

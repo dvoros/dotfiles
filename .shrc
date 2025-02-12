@@ -1,30 +1,16 @@
 # GIT
-if [ -f ~/.git-completion.bash ]; then
-	. ~/.git-completion.bash
-elif [ -f /usr/share/bash-completion/completions/git ]; then
-	. /usr/share/bash-completion/completions/git
-fi
 export GIT_COMPLETION_SHOW_ALL_COMMANDS=1 # enable auto-complete for plumbing commands
 alias gs='git status'
 alias gr='git remote'
-__git_complete gr _git_remote
 alias gl='git log --graph --date-order --pretty=format:"%C(yellow)%h %C(green)%cd %C(auto)%<(12,trunc)%an:%C(auto)%d %s" --date=iso'
-__git_complete gl _git_log
 alias glf='git log --decorate=full --pretty=fuller'
-__git_complete glf _git_log
 alias glff='git log --decorate=full --pretty=fuller -p'
-__git_complete glff _git_log
 alias glu='gl HEAD @{u}'
 alias gco='git checkout'
-__git_complete gco _git_checkout
 alias gd='git diff'
-__git_complete gd _git_diff
 alias gdw='git diff --color-words=.'
-__git_complete gdw _git_diff
 alias grh='git reset --hard'
-__git_complete grh _git_reset
 alias grhh='git reset --hard HEAD~'
-__git_complete grhh _git_reset
 alias grhu='git reset --hard @{u}'
 alias grhm='git reset --hard master@{u}'
 alias gsno='git show --name-only'
@@ -32,16 +18,12 @@ alias gcp='git cherry-pick'
 alias gcpx='git cherry-pick -x'
 alias grem='git rebase master@{u}'
 alias gre='git rebase'
-__git_complete gre _git_rebase
 alias greu='git rebase @{u}'
-__git_complete greu _git_rebase
 alias greim='git rebase master@{u}'
 alias greiu='git rebase -i @{u}'
-__git_complete greiu _git_rebase
 alias ga='git add'
 alias gref='git reflog'
 alias gf='git fetch'
-__git_complete gf _git_fetch
 alias gfo='git fetch origin'
 alias grm='git fetch origin && git checkout master && git reset --hard origin/master'
 alias gcav='git commit -av'
@@ -52,6 +34,8 @@ alias k='kubectl'
 # Increase command history size
 HISTSIZE=1000000
 HISTFILESIZE=2000000
+
+eval "$(fzf --zsh)"
 
 # Edit found stuff
 v () {
@@ -70,6 +54,7 @@ tmux_at () {
 
 stty stop ""
 
+alias fr='cd ~/repos/`ls ~/repos | fzf --tmux`'
 
 # git training
 # alias gl='git log --graph --oneline'

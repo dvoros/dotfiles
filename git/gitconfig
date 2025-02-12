@@ -1,0 +1,12 @@
+[user]
+name = Daniel nvoros
+email = daniel.voros@gmail.com
+
+[core]
+editor = nvim
+
+[pull]
+rebase = true
+
+[rebase]
+autoStash = true
