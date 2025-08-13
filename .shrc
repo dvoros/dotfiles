@@ -54,7 +54,8 @@ tmux_at () {
 
 stty stop ""
 
-alias fr='cd ~/repos/`ls ~/repos | fzf --tmux`'
+alias fr='cd ~/repos/`ls ~/repos | fzf --tmux || echo .`'
+alias ff='cd `fzf --walker dir,follow,hidden --tmux || echo .`'
 
 # git training
 # alias gl='git log --graph --oneline'
