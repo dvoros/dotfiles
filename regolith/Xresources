@@ -1,0 +1,12 @@
+
+wm.gaps.inner.size: 0
+wm.gaps.outer.size: 0
+
+regolith.wallpaper.color.primary: #1155AA
+regolith.wallpaper.file: /usr/share/backgrounds/canvas_by_roytanck.jpg
+
+!  i3-wm.program.lock: /usr/bin/i3lock
+
+Xcursor.size: 20
+!regolith.look.path: /usr/share/regolith-look/ayu-mirage
+regolith.look.path: /usr/share/regolith-look/default
