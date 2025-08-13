@@ -113,7 +113,7 @@ ctrl-shift-right = 'move right'
 
 # If more than two monitors are used some experiment is needed
 # See https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-# ctrl-m = 'move-workspace-to-monitor --wrap-around next'
+ctrl-m = 'move-workspace-to-monitor --wrap-around next'
 
 # Super + f sets fullscreen
 ctrl-f = 'fullscreen'
