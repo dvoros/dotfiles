@@ -18,7 +18,7 @@ kitty-configure:
 
 nvim-configure:
 	rm -rf "${XDG_CONFIG_HOME}/nvim"
-	git clone git@github.com:dvoros/kickstart.nvim.git "${XDG_CONFIG_HOME}/nvim"
+	git clone https://github.com/dvoros/kickstart.nvim.git "${XDG_CONFIG_HOME}/nvim"
 
 aerospace-configure:
 	rm -rf "${HOME}/.aerospace.toml"
