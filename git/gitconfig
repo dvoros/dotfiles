@@ -1,6 +1,5 @@
-[user]
-name = Daniel Voros
-email = daniel.voros@gmail.com
+[include]
+path = ~/.gitconfig.local
 
 [core]
 editor = nvim
@@ -11,3 +10,6 @@ rebase = true
 [rebase]
 autoStash = true
 autosquash = true
+
+[diff]
+colorMoved = zebra
